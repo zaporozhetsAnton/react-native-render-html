@@ -150,7 +150,8 @@ class HTMLStyles {
     .map((prop) => prop.split(':'))
     .reduce((acc, prop) => {
       if (prop.length === 2) {
-        acc[prop[0].trim()] = prop[1].trim()
+        let trimmed = prop[1].trim()
+        acc[prop[0].trim()] = trimmed.endsWith('px') ? +trimmed.slice(0, -2) : trimmed
       }
       return acc
     }, {})
