@@ -41,7 +41,7 @@ class HTMLElement extends PureComponent {
   prefixNode () {
     if (this.props.tagName === 'li') {
       if (this.props.parentTagName === 'ol') {
-        return <Text>{`\n${this.props.groupInfo.index + 1}). `}</Text>
+        return <Text>{`\n${this.props.groupInfo.index + 1}. `}</Text>
       } else {
         return <Text>{'\n• '}</Text>
       }
